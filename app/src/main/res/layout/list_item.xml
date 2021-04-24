@@ -1,27 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="8dp">
 
     <TextView
         android:id="@+id/tv_title"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        tools:text="Article Title"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="18sp"/>
 
     <TextView
         android:id="@+id/tv_section"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title"
+        android:textSize="12sp"
+        tools:text="Section"/>
 
+    <TextView
+        android:id="@+id/tv_by"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_section"
+        android:textSize="14sp"
+        android:text="Article By: "/>
 
     <TextView
         android:id="@+id/tv_author"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_section"
+        android:layout_toRightOf="@id/tv_by"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        tools:text="Author Name"/>
+
 
     <TextView
         android:id="@+id/tv_date"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-</LinearLayout>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_section"
+        android:textSize="14sp"
+        tools:text="xxx xx, xxxx"/>
+
+</RelativeLayout>
