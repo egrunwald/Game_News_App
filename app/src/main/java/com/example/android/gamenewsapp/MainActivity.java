@@ -17,6 +17,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,6 +32,8 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<L
 
     private static final int ARTICLE_LOADER_ID = 1;
 
+    private TextView emptyStateTextView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +46,9 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<L
 
         newsListView.setAdapter(mAdapter);
 
+        emptyStateTextView = findViewById(R.id.no_data);
+        newsListView.setEmptyView(emptyStateTextView);
+
         ConnectivityManager connectivityManager = (ConnectivityManager)
                 getSystemService(Context.CONNECTIVITY_SERVICE);
 
@@ -53,6 +59,11 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<L
 
             loaderManager.initLoader(ARTICLE_LOADER_ID, null, this);
 
+        } else {
+            View lodingIndicator = findViewById(R.id.progress_bar);
+            lodingIndicator.setVisibility(View.GONE);
+
+            emptyStateTextView.setText("No Internet Connection.");
         }
 
         newsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -92,6 +103,12 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<L
 
     @Override
     public void onLoadFinished(android.content.Loader<List<Article>> loader, List<Article> data) {
+
+        View progressBar = findViewById(R.id.progress_bar);
+        progressBar.setVisibility(View.GONE);
+
+        emptyStateTextView.setText("No Articles Found.");
+
         mAdapter.clear();
 
         if (data != null && !data.isEmpty()) {
