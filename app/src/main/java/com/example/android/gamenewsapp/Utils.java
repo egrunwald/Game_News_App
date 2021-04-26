@@ -2,6 +2,7 @@ package com.example.android.gamenewsapp;
 
 import android.text.TextUtils;
 import android.util.Log;
+import android.widget.TextView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -141,6 +142,10 @@ public final class Utils {
                     currentAuthor = currentTags.getJSONObject(0).getString("webTitle");
                 } else {
                     currentAuthor = "No Author Listed";
+                }
+
+                if (currentDate == null || currentDate.isEmpty()) {
+                    currentDate = "No Date Found.";
                 }
 
                 Article currentArticle = new Article(
