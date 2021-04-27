@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_height="match_parent"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="8dp">
 
@@ -10,10 +10,10 @@
         android:id="@+id/tv_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:text="Article Title"
         android:gravity="center"
+        android:textSize="18sp"
         android:textStyle="bold"
-        android:textSize="18sp"/>
+        tools:text="@string/tools_title" />
 
     <TextView
         android:id="@+id/tv_section"
@@ -21,15 +21,15 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_title"
         android:textSize="12sp"
-        tools:text="Section"/>
+        tools:text="@string/tools_section" />
 
     <TextView
         android:id="@+id/tv_by"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_section"
-        android:textSize="14sp"
-        android:text="Article By: "/>
+        android:text="@string/text_view_by"
+        android:textSize="14sp" />
 
     <TextView
         android:id="@+id/tv_author"
@@ -39,16 +39,16 @@
         android:layout_toRightOf="@id/tv_by"
         android:textSize="14sp"
         android:textStyle="italic"
-        tools:text="Author Name"/>
+        tools:text="@string/tools_author" />
 
 
     <TextView
         android:id="@+id/tv_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
         android:layout_below="@id/tv_section"
+        android:layout_alignParentRight="true"
         android:textSize="14sp"
-        tools:text="xxx xx, xxxx"/>
+        tools:text="@string/tools_date" />
 
 </RelativeLayout>

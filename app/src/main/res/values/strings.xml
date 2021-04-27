@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Game News App</string>
+    <string name="tools_section">Section ID</string>
+    <string name="tools_title">Article Title</string>
+    <string name="tools_author">Author Name</string>
+    <string name="tools_date">xxx xx, xxxx</string>
+
+    <string name="no_data">No Articles Found.</string>
+    <string name="no_internet">No Internet Connection.</string>
+    <string name="text_view_by">Article By: </string>
+    <string name="base_url">http://content.guardianapis.com/search</string>
+
 </resources>

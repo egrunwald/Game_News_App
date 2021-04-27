@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<L
 
     private ArticleAdapter mAdapter;
 
-    private static final String NEWS_BASE_URL = "http://content.guardianapis.com/search";
+    private final String NEWS_BASE_URL = (String) getText(R.string.base_url);
 
     private static final int ARTICLE_LOADER_ID = 1;
 
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<L
             View lodingIndicator = findViewById(R.id.progress_bar);
             lodingIndicator.setVisibility(View.GONE);
 
-            emptyStateTextView.setText("No Internet Connection.");
+            emptyStateTextView.setText(getText(R.string.no_internet));
         }
 
         newsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<L
         View progressBar = findViewById(R.id.progress_bar);
         progressBar.setVisibility(View.GONE);
 
-        emptyStateTextView.setText("No Articles Found.");
+        emptyStateTextView.setText(getText(R.string.no_data));
 
         mAdapter.clear();
 

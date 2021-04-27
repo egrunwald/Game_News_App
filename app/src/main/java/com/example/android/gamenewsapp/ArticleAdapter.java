@@ -56,6 +56,7 @@ public class ArticleAdapter extends ArrayAdapter<Article> {
     }
 
     private String formatDate(String jsonDate) {
+
         SimpleDateFormat jsonDateFormat = new SimpleDateFormat(
                 "yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.US);
         SimpleDateFormat dateFormat = new SimpleDateFormat(
@@ -65,7 +66,7 @@ public class ArticleAdapter extends ArrayAdapter<Article> {
             return dateFormat.format(jsonDateParsed);
         } catch (ParseException e) {
             Log.e(LOG_TAG, "problem formatting date.", e);
-            return "Bad Date Format";
+            return "Bad Date Format.";
         }
     }
 }
