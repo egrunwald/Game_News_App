@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<L
 
     private ArticleAdapter mAdapter;
 
-    private final String NEWS_BASE_URL = (String) getText(R.string.base_url);
+    private final String NEWS_BASE_URL = "http://content.guardianapis.com/search";
 
     private static final int ARTICLE_LOADER_ID = 1;
 

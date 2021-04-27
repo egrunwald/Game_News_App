@@ -8,6 +8,4 @@
     <string name="no_data">No Articles Found.</string>
     <string name="no_internet">No Internet Connection.</string>
     <string name="text_view_by">Article By: </string>
-    <string name="base_url">http://content.guardianapis.com/search</string>
-
 </resources>
