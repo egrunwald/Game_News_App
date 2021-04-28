@@ -12,6 +12,14 @@ public class Article {
 
     private String mUrl;
 
+    /**
+     * Create a new Article object.
+     * @param title    is the Title of the Article.
+     * @param author   is the Author or main Contributor of the Article
+     * @param section  is the News category of the Article.
+     * @param date     is the Date of publication of the Article.
+     * @param url      is the URL for the full Article.
+     */
     public Article(String title, String author, String section, String date, String url) {
         mTitle = title;
         mAuthor = author;
@@ -20,6 +28,11 @@ public class Article {
         mUrl = url;
     }
 
+    /**
+     * A method for returning data from the article object.
+     * @param category Selects the data to be returned.
+     * @return the selected data String.
+     */
     public String getArticleData(String category) {
         String data = null;
         switch (category) {
