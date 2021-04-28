@@ -16,7 +16,6 @@
         <!-- Customize your theme here. -->
         <item name="android:actionBarStyle">@style/myActionBar</item>
         <item name="actionBarStyle">@style/myActionBar</item>
-
     </style>
 
     <style name="myActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
