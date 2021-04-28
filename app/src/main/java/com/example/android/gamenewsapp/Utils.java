@@ -19,7 +19,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-
 public final class Utils {
 
     public static final String LOG_TAG = Utils.class.getName();
@@ -46,7 +45,7 @@ public final class Utils {
         try {
             url = new URL(urlString);
         } catch (MalformedURLException e) {
-            Log.e(LOG_TAG,  "Error creating URL.", e);
+            Log.e(LOG_TAG, "Error creating URL.", e);
         }
         return url;
     }
@@ -67,7 +66,7 @@ public final class Utils {
             urlConnection.setRequestMethod("GET");
             urlConnection.connect();
 
-            if (urlConnection.getResponseCode() == 200){
+            if (urlConnection.getResponseCode() == 200) {
                 inputStream = urlConnection.getInputStream();
                 jsonResponse = readFromStream(inputStream);
             } else {

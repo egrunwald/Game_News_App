@@ -25,13 +25,9 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity implements LoaderCallbacks<List<Article>> {
 
     public static final String LOG_TAG = MainActivity.class.getName();
-
-    private ArticleAdapter mAdapter;
-
-    private final String NEWS_BASE_URL = "http://content.guardianapis.com/search";
-
     private static final int ARTICLE_LOADER_ID = 1;
-
+    private final String NEWS_BASE_URL = "http://content.guardianapis.com/search";
+    private ArticleAdapter mAdapter;
     private TextView emptyStateTextView;
 
     @Override

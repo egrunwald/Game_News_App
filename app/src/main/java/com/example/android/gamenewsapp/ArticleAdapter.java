@@ -20,7 +20,7 @@ import java.util.Locale;
 public class ArticleAdapter extends ArrayAdapter<Article> {
     public static final String LOG_TAG = ArrayAdapter.class.getName();
 
-    public ArticleAdapter(Activity context, List<Article>articles) {
+    public ArticleAdapter(Activity context, List<Article> articles) {
         super(context, 0, articles);
     }
 

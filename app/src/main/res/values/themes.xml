@@ -18,11 +18,9 @@
         <item name="actionBarStyle">@style/myActionBar</item>
 
     </style>
+
     <style name="myActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
         <item name="android:background">@drawable/game_boarder</item>
         <item name="background">@drawable/game_boarder</item>
     </style>
-
-
-
 </resources>
